@@ -3,14 +3,14 @@
 
 
 {% block title %}
-Subjects
+المواد
 {% endblock title %}
 
 
 {% block breadcrumb %}
   <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal1">
     <i class="fa fa-plus"></i>
-    Add new subject
+    أضف مادة جديدة
   </a>
 {% endblock breadcrumb %}
   
@@ -42,7 +42,7 @@ Subjects
       <div class="modal-content">
         <form action="{% url 'subject-create' %}" method="POST">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add new subject</h5>
+            <h5 class="modal-title" id="exampleModalLabel">أضف مادة جديدة</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

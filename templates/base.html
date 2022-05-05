@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>{{ school_name | default:"MySchool" }}</title>
+  <title>{{ school_name | default:"نظام المدرسة" }}</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
@@ -39,10 +39,10 @@
           <a href="{% url 'home' %} " class="nav-link"><i class="fa fa-home"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="{% url 'current-session' %}" class="nav-link">Session: {{ current_session }}</a>
+          <a href="{% url 'current-session' %}" class="nav-link">الجلسة: {{ current_session }}</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="{% url 'current-session' %}" class="nav-link">Term: {{ current_term }}</a>
+          <a href="{% url 'current-session' %}" class="nav-link">سيمستر: {{ current_term }}</a>
         </li>
       </ul>
 
@@ -57,11 +57,11 @@
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
             <a href="#" class="dropdown-item">
-              <i class="fas fa-user mr-2"></i> Profile
+              <i class="fas fa-user mr-2"></i> الملف الشخصي
             </a>
             <div class="dropdown-divider"></div>
             <a href="{% url 'logout' %}" class="dropdown-item">
-              <i class="fas fa-sign-out"></i> Sign out
+              <i class="fas fa-sign-out"></i> تسجيل الخروج
             </a>
           </div>
         </li>
@@ -76,7 +76,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="{% url 'home' %}" class="brand-link">{{ school_name | default:"MySchool" }}</a>
+      <a href="{% url 'home' %}" class="brand-link">{{ school_name | default:"نظام دجانغو" }}</a>
 
       <!-- Sidebar -->
       <div class="sidebar">
@@ -89,7 +89,7 @@
               <a href="{% url 'student-list' %}" class="nav-link">
                 <i class="nav-icon fas fa-graduation-cap"></i>
                 <p>
-                  Students
+                  الطلبة
                 </p>
               </a>
             </li>
@@ -97,26 +97,26 @@
               <a href="{% url 'staff-list' %}" class="nav-link">
                 <i class="nav-icon fas fa-users"></i>
                 <p>
-                  Member of Staff
+                  العاملين
                 </p>
               </a>
             </li>
 
-            <li class="nav-header">Finance</li>
+            <li class="nav-header">العمليات المالية</li>
             <li class="nav-item">
               <a href="{% url 'invoice-list' %}" class="nav-link">
                 <i class="nav-icon fas fa-money-bill-alt"></i>
                 <p>
-                  Invoices
+                  الفواتير
                 </p>
               </a>
             </li>
-            <li class="nav-header">Results</li>
+            <li class="nav-header">النتائج</li>
             <li class="nav-item">
               <a href="{% url 'create-result' %}" class="nav-link">
                 <i class="nav-icon fas fa-money-bill-alt"></i>
                 <p>
-                  Create Results
+                  إنشاء نتائج
                 </p>
               </a>
             </li>
@@ -124,7 +124,7 @@
               <a href="{% url 'edit-results' %}" class="nav-link">
                 <i class="nav-icon fas fa-money-bill-alt"></i>
                 <p>
-                  Update Results
+                  تعديل النتائج
                 </p>
               </a>
             </li>
@@ -132,17 +132,17 @@
               <a href="{% url 'view-results' %}" class="nav-link">
                 <i class="nav-icon fas fa-money-bill-alt"></i>
                 <p>
-                  View Results
+                  عرض النتائج
                 </p>
               </a>
             </li>
 
-            <li class="nav-header">Others</li>
+            <li class="nav-header">اخرى</li>
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
-                  Management
+                  الادارة
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -151,7 +151,7 @@
                   <a href="{% url 'sessions' %}" class="nav-link">
                     <i class="nav-icon fas fa-bars"></i>
                     <p>
-                      Sessions
+                      الجلسات
                     </p>
                   </a>
                 </li>
@@ -159,7 +159,7 @@
                   <a href="{% url 'terms' %}" class="nav-link">
                     <i class="nav-icon fas fa-bars"></i>
                     <p>
-                      Terms
+                      الشروط
                       <i class="right"></i>
                     </p>
                   </a>
@@ -168,7 +168,7 @@
                   <a href="{% url 'subjects' %}" class="nav-link">
                     <i class="nav-icon fas fa-bars"></i>
                     <p>
-                      Subjects
+                      المواد
                     </p>
                   </a>
                 </li>
@@ -176,7 +176,7 @@
                   <a href="{% url 'classes' %}" class="nav-link">
                     <i class="nav-icon fas fa-bars"></i>
                     <p>
-                      Classes
+                      الفصول
                     </p>
                   </a>
                 </li>
@@ -186,7 +186,7 @@
               <a href="{% url 'configs' %}" class="nav-link">
                 <i class="nav-icon fas fa-cog"></i>
                 <p>
-                  Settings
+                  الاعدادات
                 </p>
               </a>
             </li>

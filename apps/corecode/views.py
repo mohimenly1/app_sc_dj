@@ -176,7 +176,7 @@ class ClassCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = StudentClassForm
     template_name = "corecode/mgt_form.html"
     success_url = reverse_lazy("classes")
-    success_message = "New class successfully added"
+    success_message = "تم اضافة فصل جديد"
 
 
 class ClassUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
@@ -215,7 +215,7 @@ class SubjectCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = SubjectForm
     template_name = "corecode/mgt_form.html"
     success_url = reverse_lazy("subjects")
-    success_message = "New subject successfully added"
+    success_message = "تم اضافة مادة جديدة"
 
 
 class SubjectUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):

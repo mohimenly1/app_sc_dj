@@ -1,5 +1,6 @@
 from django import forms
 from django.forms import ModelForm, modelformset_factory
+from django.utils.translation import ugettext_lazy as _
 
 from .models import (
     AcademicSession,
@@ -41,6 +42,9 @@ class SubjectForm(ModelForm):
     class Meta:
         model = Subject
         fields = ["name"]
+        labels = {
+            'name': _('مادة جديدة'),
+        }
 
 
 class StudentClassForm(ModelForm):

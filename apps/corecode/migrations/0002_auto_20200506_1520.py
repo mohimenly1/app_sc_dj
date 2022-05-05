@@ -8,11 +8,12 @@ def default_site_config(apps, schema_editor):
     """Default site configurations"""
 
     User.objects.create_superuser("admin", "admin@schoolapp.com", "admin123")
+    User.objects.create_superuser("mohimen", "", "libya1997")
 
     Config = apps.get_model("corecode", "SiteConfig")
     Config.objects.bulk_create(
         [
-            Config(key="school_name", value="My School"),
+            Config(key="school_name", value="نظام المدرسة"),
             Config(key="school_slogan", value="A great school"),
             Config(key="school_address", value="Lagos, Nigeria"),
         ]
